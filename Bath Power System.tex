@@ -1,7 +1,7 @@
 \section{Voltage Measurement}
-Although data can be considered in the analogue domain, it is usually thought of digitally. In this way, a large portion of any DAQ system is devoted to converting analogue signals to digital data in components called analogue to digital converters (ADCs). There are varied approaches to ADCs, and each have their benefits and flaws.
+Electrical potential or voltage is measured in a wide range of sensing applications, as it is readily converted into digital signals for processing. This is undertaken through the use of Analogue to Digital Converters (ADCs). There are various types of ADC, each of which has associated benefits and drawbacks.
 
-Flash ADCs use individual comparators and logic gates to produce extremely fast ADCs, however as the number of output bits increases, the number of logic gates needed increases rapidly because one comparator is needed for each value. This means that the cost of ADCs with more than 7bits of resolution is prohibitive.
+Flash ADCs use a sequence of comparators and logic gates to facilitate an extremely fast conversion. Hhowever, the number of output bits, the number of logic gates and comparators needed increases exponentially because one comparator is needed for each discrete value. Therefore the cost implications of flash ADCs of >8bits are prohibitive for many applications.
 
 Successive approximation ADCs use a comparator coupled with a digital-to-analogue converter to get a gradually more accurate digital value. Successive approximation ADCs take a different amount of time to arrive at a digital value depending upon how many successive steps are taken to reach the correct analogue value. These ADCs can be produced with much higher resolution, but at lower sample rates.
 

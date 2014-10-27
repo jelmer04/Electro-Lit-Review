@@ -19,7 +19,9 @@ The most basic form of current measurement can be undertaken using a sub-ohm ``c
 
 An alternative to the current sense resistor is to use an inductor's DC resistance. An idea inductor has no DC resistance, however in reality they exhibit resistances of sub-milliohm levels. This means that the power loss is much less than in the current sense reistor method, however due to the high TCR of copper, the current measurement varies greatly with temperature.
 
-Another method of current sensing is to use the power control transistors already used in the circuit. This has the benefit of requiring no additional power-disipating devices in the supply line. The internal ``on resistance'' of the transistor, which can be found in the part's datasheet, is used to provide the voltage drop to measure. Transistors often have extremely large TCRs, and therefore the accuracy of measurement cannot be guaranteed.
+Another method of current sensing is to use the power control transistors already used in the circuit. This has the benefit of requiring no additional power-disipating devices in the supply line. The internal ``on resistance'' of the transistor, which can be found in the part's datasheet, is used to provide the voltage drop to measure. Transistors often have extremely large TCRs, and therefore the accuracy of measurement cannot be guaranteed. 
+
+Some transistors are designed with built in ``ratiometric current sense transistors'', which use a portion of the transistor to create and isolated sense transistor. When the transistor is on, the current through the sense transistor will be a ratio of the overall current. Depending upon the model used, the accuracy can be as high as 5\%.
 
 
 \subsection{Current Control}

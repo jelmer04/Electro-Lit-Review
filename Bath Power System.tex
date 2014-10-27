@@ -1,10 +1,19 @@
-\subsection{Voltage Measurement}
+\section{Voltage Measurement}
+Although data can be considered in the analogue domain, it is usually thought of digitally. In this way, a large portion of any DAQ system is devoted to converting analogue signals to digital data in components called analogue to digital converters (ADCs). There are varied approaches to ADCs, and each have their benefits and flaws.
+
+Flash ADCs use individual comparators and logic gates to produce extremely fast ADCs, however as the number of output bits increases, the number of logic gates needed increases rapidly because one comparator is needed for each value. This means that the cost of ADCs with more than 7bits of resolution is prohibitive.
+
+Successive approximation ADCs use a comparator coupled with a digital-to-analogue converter to get a gradually more accurate digital value. Successive approximation ADCs take a different amount of time to arrive at a digital value depending upon how many successive steps are taken to reach the correct analogue value. These ADCs can be produced with much higher resolution, but at lower sample rates.
+
+Sub-ranging ADCs use successive approximation techniques to find the most significant bit values, and a flash ADC to find the least significant bits. This allows sub-ranging ADCs to perform faster than successive approximation ADCs, but slower than flash ADCs. The ability to obtain the most significant bits by successive approximation allows these ADCs to have high resolution, without the vastly increased cost of purely flash ADCs.
 
 
-\subsection{Voltage Control}
 
 
-\subsection{Current Measurement}
+\section{Voltage Control}
 
 
-\subsection{Current Control}
+\section{Current Measurement}
+
+
+\section{Current Control}

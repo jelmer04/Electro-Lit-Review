@@ -2,7 +2,7 @@
 \subsection{Voltage Measurement}\lable{volt-meas}
 Electrical potential or voltage is measured in a wide range of sensing applications, as it is readily converted into digital signals for processing. This is undertaken through the use of Analogue to Digital Converters (ADCs). There are various types of ADC, each of which has associated benefits and drawbacks.
 
-Flash ADCs use a sequence of comparators and logic gates to facilitate an extremely fast conversion. Hhowever, the number of output bits, the number of logic gates and comparators needed increases exponentially because one comparator is needed for each discrete value. Therefore the cost implications of flash ADCs of >8bits are prohibitive for many applications.
+Flash ADCs use a sequence of comparators and logic gates to facilitate an extremely fast conversion. However, the number of output bits, the number of logic gates and comparators needed increases exponentially because one comparator is needed for each discrete value. Therefore the cost implications of flash ADCs of >8bits are prohibitive for many applications.
 
 Successive approximation ADCs utilise a comparator coupled with a digital-to-analogue converter to make increasingly accurate digital values over a series of attempts. Because more attempts are needed to convert different analogue voltages, the conversion duration is not fixed. These ADCs can be produced with much higher resolution, at the detriment of sample rate.
 
@@ -23,7 +23,7 @@ Similar to the R-2R ladder, is the binary weighted DAC which uses precision inte
 
 The thermometer-coded DAC uses a precision current source for each discrete value in its voltage range. This has the advantage of superb precision and speed, however costs escalate exponentially with additional bits of precision.
 
-An alternative DAC technique is oversampling, which utilises a low resolution DAC running at a much higher sample rate.
+An alternative DAC technique is oversampling, which utilises a low resolution DAC running at a much higher sample rate. For example in oversampling audio DACs, a single bit DAC is used at a high sample rate to convert the digital signal into a series of pulses, which are then filtered to form an auidible signal. Oversampling DACs allow for high resolution, and are readily available due to their widespead application in audio processing.
 ***http://www.analog.com/static/imported-files/tutorials/MT-017.pdf***
 
 *** Something about pulse/pulse reverse - \cite{Chandrasekar} ***

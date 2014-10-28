@@ -23,6 +23,8 @@ Another method of current sensing is to use the power control transistors alread
 
 Some transistors are designed with built in ``ratiometric current sense transistors'', which use a portion of the transistor to create and isolated sense transistor. When the transistor is on, the current through the sense transistor will be a ratio of the overall current. Depending upon the model used, the accuracy can range from 5\% to 20\%, making them unsuitable for precise current control applications.
 
+Alternatively, current can be measured indirectly using the Hall effect \cite{hall}. When a current carying conductor is placed in an electric field, there is a potential induced perpendicular to the current flow. This potential is porportional to the current, and can be measured using one of the techniques discussed in \ref{volt-meas}. However, this method of sensing is not applicable to low current applications as the induced Hall voltage is weak. Hall sensors are also suceptible to interference from external megnetic fields and non-linear temperature drift, making them unsiatable for mny applications. However, Hall sensors have the advantage of low power dissipation, and are capable of measuring high currents.
+
 *** Need to add some stuff on external sensing - transformers, Hall, magnetics and stuff... ***
 
 \subsection{Current Control}

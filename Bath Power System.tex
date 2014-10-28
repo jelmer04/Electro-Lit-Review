@@ -16,7 +16,13 @@ Voltage control can be carried out using digital to analogue converters (DACs), 
 
 The simplest of DAC techniques is pulse width modulation (PWM). The output voltage is switched on and off at a set frequency, and the pulse duration is adjusted according to the digital input. By passing the output signal through a low pass filter, the waveform is smoothed toward a perfect DC voltage, proportional to the digital input. The advantage of PWM is that it is cheap to implement - existing power switching electronics can be used. However, the output voltage fluctuates which makes PWM unsuitable for high stability applications.
 
-Another simple DAC is the R-2R ladder, which utilises a repeated pattern of resistors to generate an analogue voltage from a series of bits. Resistors are chosen so that the ``rung'' resistors are precisely twice the value of the ``rail'' resistors. Alternatively, additional bits can be added by matching the Thevenin equivalent reistance of the lower bits. *** Probably needs a daigram ***
+Another simple DAC is the R-2R ladder, which utilises a repeated pattern of resistors to generate an analogue voltage from a series of bits. Resistors are chosen so that the ``rung'' resistors are precisely twice the value of the ``rail'' resistors. Alternatively, additional bits can be added by matching the Thevenin equivalent reistance of the lower bits. R-2R ladders are low cost due to the availability of precision reistors, however their acuracy can be low if poorly matched resistors are used. *** Probably needs a daigram ***
+
+Similar to the R-2R ladder, is the binary weighted DAC which uses precision internal voltages for each individual bit, combined with a summing circuit to produce the output voltage. These DACs are very fast but precision can suffer if the more significant bits' voltages are inacurate.
+
+
+The thermometer-coded DAC uses a precision current source for each discrete value in its voltage range. This has the advantage of superb precision and speed, however costs escalate exponentially with additional bits of precision.
+***
 
 
 \subsection{Current Measurement}
@@ -30,6 +36,6 @@ Another method of current sensing is to use the power control transistors alread
 
 Some transistors are designed with built in ``ratiometric current sense transistors'', which use a portion of the transistor to create and isolated sense transistor. When the transistor is on, the current through the sense transistor will be a ratio of the overall current. Depending upon the model used, the accuracy can range from 5\% to 20\%, making them unsuitable for precise current control applications.
 
-Alternatively, current can be measured indirectly using the Hall effect \cite{hall}. When a current carying conductor is placed in an electric field, there is a potential induced perpendicular to the current flow. This potential is porportional to the current, and can be measured using one of the techniques discussed in \ref{volt-meas}. However, this method of sensing is not applicable to low current applications as the induced Hall voltage is weak. Hall sensors are also suceptible to interference from external megnetic fields and non-linear temperature drift, making them unsiatable for mny applications. However, Hall sensors have the advantage of low power dissipation, and are capable of measuring high currents.
+Alternatively, current can be measured indirectly using the Hall effect \cite{hall}. When a current carying conductor is placed in an electric field, there is a potential induced perpendicular to the current flow. This potential is porportional to the current, and can be measured using one of the techniques discussed in \ref{volt-meas}. However, this method of sensing is not applicable to low current applications as the induced Hall voltage is weak. Hall sensors are also suceptible to interference from external megnetic fields and non-linear temperature drift, making them unsuitable for mny applications. However, Hall sensors have the advantage of low power dissipation, and are capable of measuring high currents.
 
 \subsection{Current Control}
